@@ -10,6 +10,7 @@ A Python script to automatically backup your entire OneDrive (personal accounts)
 ✅ **Real-time progress tracking**  
 ✅ **Handles large backups** (500GB+)  
 ✅ **Supports documents and pictures** (configurable file types)  
+✅ **Resume capability** - automatically continues from where it left off if interrupted  
 🔒 This tool runs entirely on your local machine.  
    - No credentials are stored or transmitted to any third party  
    - No file content is uploaded to any server  
@@ -155,7 +156,13 @@ Make sure your external drive is connected and mounted. Use the exact path shown
 You copied the Secret ID instead of the Value. Go back to Azure and create a new client secret, then copy the **Value** column.
 
 ### Browser doesn't open
-Make sure `webbrowser` module is available (it's built into Python). Try running in a different terminal.
+Make sure `webbrowser` module is available (it's built into Python). Try running in a different terminal.  
+
+### Script was interrupted  
+If the backup stops for any reason (power loss, crash, Ctrl+C), simply run the script again with the same settings. It will automatically resume from where it left off. Progress is saved every 10 files in a hidden `.progress.json` file in your backup folder.  
+  
+### Token keeps refreshing without downloading  
+This can happen during initial folder scanning if you have many folders. The script will eventually stabilize and begin downloading. If it refreshes more than 6 times in a row, stop the script (Ctrl+C) and restart it.  
 
 ## Security Notes
 
