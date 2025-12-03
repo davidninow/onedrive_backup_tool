@@ -9,7 +9,8 @@ A Python script to automatically backup your entire OneDrive (personal accounts)
 ✅ **Auto-refreshing tokens** - can run for days/weeks without re-authentication  
 ✅ **Real-time progress tracking**  
 ✅ **Handles large backups** (500GB+)  
-✅ **Supports documents and pictures** (configurable file types)  
+✅ **Supports documents and pictures** (configurable file types)
+✅ **Runs locally, does not store ANY credentials or content**
 
 ## Requirements
 
