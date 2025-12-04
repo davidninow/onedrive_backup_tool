@@ -51,8 +51,23 @@ Before using the script, you need to create an Azure app registration:
 
 1. Go to [Microsoft Entra Admin Center](https://entra.microsoft.com/)
 2. Sign in with your personal Microsoft account
+   * If you get errors at this point, fret not! If no errors, skip to step 3.
+   * The first error you'll likely see: "Interaction Required..." - simply click `Ignore` and **quickly** click on `App Registrations` in the left sidebar (if the error reappears, just keep clicking `Ignore` and be quicker :)
 3. Look for "App registrations" in the left sidebar (or search for it)
-4. Click "+ New registration" button at the top
+4. Click "+ New registration" button at the top **(if no errors, skip the bullets below and jump to the next step)**
+    * If you haven't setup a directory previously, you'll be asked to sign up for an Azure or Dev account to create one.
+    * Our most tested path is to click the link to `sign up for an Azure account`.
+    * Click `Try Azure for Free`
+    * Go through the setup process for personal use (name, email phone, verify), click `Next`
+    * Fill out your address, click `Next`
+    * This next page asks for your credit card info. ⚠️**STOP!**⚠️ you don't need to give them your CC info for this
+    * Just click `Back` until you're back at the first info signup page for Azure
+    * Close the Azure signup tab and go back to your App Registration page
+    * Click your profile icon at the top right of the screen
+    * Click `Switch Directories`
+    * You should now see a `Default` or similar directory. Click the button to switch to that directory
+    * Now navigate back to the App Registration page
+    * Click `+ New Registration` button at the top
 5. Fill out the form:
    - **Name:** `OneDrive Backup Tool`
    - **Supported account types:** "Accounts in any organizational directory and personal Microsoft accounts"
@@ -72,8 +87,8 @@ Before using the script, you need to create an Azure app registration:
 4. Expiration: `24 months`
 5. Click **Add**
 6. **IMMEDIATELY copy the Value** (you can only see it once!)
-7. Note: You can copy the Secret ID too if you want, but you won't need it for this process
-8. Save this with your Client ID
+   * Note: You can copy the Secret ID too if you want, but you won't need it for this process
+7. Save this with your Client ID
 
 ### Step 4: Set API Permissions
 
